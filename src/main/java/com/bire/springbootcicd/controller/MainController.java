@@ -12,7 +12,7 @@ public class MainController {
     @GetMapping(path = "/get-info/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getInfo(@PathVariable("id") Long id){
         if(id != null){
-            return ResponseEntity.ok("The id is valid!");
+            return ResponseEntity.ok("The id ["+ id+"] is valid!");
         }
         return ResponseEntity.badRequest().body("The id is invalid! Please, try again!");
     }
